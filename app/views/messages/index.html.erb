@@ -1,0 +1,7 @@
+<h1>Message Board</h1>
+
+<% @messages.each do |message| %>
+	<h3><%= message.description %></h3>
+	<h5><%= link_to "Edit Posting", edit_message_path(message) %></h5>
+	<h5><%= link_to 'Delete Posting', message, method: :delete %></h5>
+<% end %>
